@@ -19,16 +19,25 @@
         START YOUR ORDER
       </button>
     </div>
+    <div class="img-offerta">
+      <img
+        src="@/img/svg-0.svg"
+        alt="filtro"
+      >
+    </div>
+    <MenuCategories />
   </div>
 </template>
 
 <script>
 import PopularDishes from '@/components/PopularDishes.vue';
+import MenuCategories from '@/components/MenuCategories.vue';
 
 export default {
   name: 'MainPage',
   components: {
     PopularDishes,
+    MenuCategories,
   },
   data() {
     return {
@@ -108,5 +117,11 @@ export default {
       color: black;
       background-color: #ffd028;
     }
+  }
+  .img-offerta {
+    background-image: url(@/img/first-order-background-scaled.jpg);
+    background-size: cover;
+    height: 440px;
+    margin-bottom: 70px;
   }
 </style>
