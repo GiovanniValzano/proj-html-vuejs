@@ -32,7 +32,7 @@ export default {
  }
  .container-1 {
   height: 110vh;
-  max-width: 1250px;
+  max-width: 1220px;
   margin: auto;
   padding: 0 15px;
   }
@@ -59,7 +59,7 @@ export default {
   border: none;
   font-size: 15px;
   font-weight: 600;
-  word-spacing: 8px;
+  word-spacing: 3px;
   padding: 10px 20px;
   border-radius: 50px;
   margin-top: 30px;
