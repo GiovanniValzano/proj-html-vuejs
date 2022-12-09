@@ -15,7 +15,7 @@
           :card="dish"
         />
       </div>
-      <button class="order">
+      <button class="orderbutton">
         START YOUR ORDER
       </button>
     </div>
@@ -26,18 +26,52 @@
       >
     </div>
     <MenuCategories />
+    <div class="options">
+      <div class="vegetarian">
+        <font-awesome-icon icon="fa-solid fa-leaf" />
+        <h4>
+          Vegetarian
+        </h4>
+      </div>
+      <div class="gluten">
+        <font-awesome-icon icon="fa-solid fa-wheat-awn" />
+        <h4>
+          Gluten Free
+        </h4>
+      </div>
+      <div class="milk">
+        <font-awesome-icon icon="fa-solid fa-glass-water" />
+        <h4>
+          Dairy Free
+        </h4>
+      </div>
+      <div class="meat">
+        <font-awesome-icon icon="fa-solid fa-drumstick-bite" />
+        <h4>
+          Keto Friendly
+        </h4>
+      </div>
+    </div>
+    <div class="order">
+      <OrderPage />
+    </div>
+    <LastNews />
   </div>
 </template>
 
 <script>
 import PopularDishes from '@/components/PopularDishes.vue';
 import MenuCategories from '@/components/MenuCategories.vue';
+import LastNews from '@/components/LastNews.vue';
+import OrderPage from './MainOrder.vue';
 
 export default {
   name: 'MainPage',
   components: {
     PopularDishes,
     MenuCategories,
+    OrderPage,
+    LastNews,
   },
   data() {
     return {
@@ -123,5 +157,48 @@ export default {
     background-size: cover;
     height: 440px;
     margin-bottom: 70px;
+  }
+  .options {
+    max-width: 1200px;
+    margin: 50px auto 0px auto;
+    font-size: 60px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    .vegetarian {
+      color: rgb(0, 200, 0);
+      &:hover {
+        color: #ffd028;
+      }
+    }
+    .gluten {
+      color: rgb(214, 168, 0);
+      &:hover {
+        color: #ffd028;
+      }
+    }
+    .milk {
+      color: rgb(142, 221, 252);
+      &:hover {
+        color: #ffd028;
+      }
+    }
+    .meat {
+      color: rgb(192, 26, 0);
+      &:hover {
+        color: #ffd028;
+      }
+    }
+    h4 {
+      font-size: 25px;
+      color: black;
+      margin-top: 20px;
+    }
+  }
+  .order {
+    background-image: url(@/img/app-ordering-scaled.jpg);
+    background-size: cover;
+    margin-top: 120px;
+    padding: 130px 0px;
   }
 </style>
