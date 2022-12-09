@@ -63,6 +63,7 @@ export default {
         }
     }
     h2 {
+      margin-top: -50px;
         font-size: 55px;
         margin-bottom: -60px;
     }
